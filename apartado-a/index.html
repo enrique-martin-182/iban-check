@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador IBAN Español</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏦 Validador de IBAN Español</h1>
+        
+        <div class="input-group">
+            <input type="text" id="ibanInput" 
+                   placeholder="Ej: ES21 1465 0100 72 2030876293" 
+                   maxlength="34"
+                   autofocus>
+            <button id="validateButton">Validar</button>
+        </div>
+
+        <div id="errorMessage" class="hidden"></div>
+
+        <div id="resultContainer" class="hidden">
+            <div class="result-section">
+                <h3>✅ Validación correcta</h3>
+                <div class="validation-results">
+                    <p>IBAN bien formado</p>
+                    <p>IBAN válido</p>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <h3>📋 Información de la cuentaa</h3>
+                <div class="bank-info">
+                    <p><span class="label">Banco:</span> <span id="bankName">-</span></p>
+                    <p><span class="label">Sucursal:</span> <span id="branchCode">-</span></p>
+                    <p><span class="label">Díg. control:</span> <span id="controlDigit">-</span></p>
+                    <p><span class="label">Cuenta:</span> <span id="accountNumber">-</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

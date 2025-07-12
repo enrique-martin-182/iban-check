@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "ibantools": "^4.5.1"
+  }
+}
